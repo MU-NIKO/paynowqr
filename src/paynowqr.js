@@ -1,5 +1,3 @@
-const dayjs = require('dayjs');
-
 class PaynowQR{
   constructor(opts){
     Object.defineProperty(this, 'qrstring',{
@@ -99,7 +97,7 @@ class PaynowQR{
           { id: '01', value: '2' },                 // 0 for mobile, 2 for UEN. 1 is not used.
           { id: '02', value: String(opts.uen) },            // PayNow UEN (Company Unique Entity Number)
           { id: '03', value: String(! opts.amount ||opts.editable ? 1 : 0) },       // 1 = Payment amount is editable, 0 = Not Editable
-          { id: '04', value: String(opts.expiry|| dayjs().add(5,"year").format('YYYYMMDD') )}]         // Expiry date (YYYYMMDD)
+          { id: '04', value: String(opts.expiry )}]         // Expiry date (YYYYMMDD)
       },
       { id: '52', value: '0000' },                  // ID 52: Merchant Category Code (not used)
       { id: '53', value: '702' },                   // ID 53: Currency. SGD is 702

@@ -1,5 +1,5 @@
 {
-  "name": "paynowqr",
+  "name": "@mu-niko/paynowqr",
   "version": "1.1.2",
   "description": "Singapore Paynow QR generator for node.js and javascript",
   "main": "dist/paynowqr.umd.js",
@@ -8,9 +8,6 @@
   "files": [
     "/dist"
   ],
-  "dependencies": {
-    "dayjs": "^1.8.26"
-  },
   "devDependencies": {
     "@rollup/plugin-commonjs": "^11.1.0",
     "@rollup/plugin-node-resolve": "^7.1.3",
